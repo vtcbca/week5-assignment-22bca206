@@ -1,6 +1,6 @@
 #Insert Records Directly And Take Input From User Into CSV File.
 
-def insert_records(attribute,records):#,list_of_records):
+def insert_records(attribute,records,list_of_records):
     pass
 
 attribute=['StudentId','StudentName','City','Contact_Number']
@@ -12,15 +12,15 @@ records=[[11,'Jay Patel','Surat',9510500989],
         [13,'Krishna Prajapati','Delhi',9510522989],
         [15,'Shiv Pandya','Surat',9712530989]]
 
-'''# Insert 5 records By User
+# Insert 5 records By User
 list_of_records=[]
-for i in range(1):
+for i in range(5):
         no=int(input(" Enter ID Of Student : "))
         name=input(" Enter Name Of Student : ")
         city=input(" Enter City Of Student : ")
         phoneno=int(input(" Enter Contact Number Of Student : "))
         li=[no,name,city,phoneno]
-        list_of_records.append(li)'''
+        list_of_records.append(li)
 
 # Write Above Records Into student.csv File.
 
@@ -30,7 +30,7 @@ def write_on_csvfile():
         whole_file=c.writer(csvobj)
         whole_file.writerow(attribute)
         whole_file.writerows(records)
-        #whole_file.writerows(list_of_records)
+        whole_file.writerows(list_of_records)
 
 
 # Read Student.csv File And Print It.
@@ -54,7 +54,7 @@ def read_csvfile():
 
 #Function Call
 
-insert_records(attribute, records)#,list_of_records)
+insert_records(attribute, records,list_of_records)
 write_on_csvfile()
 print("\n\n")
 print("\n\t\t  Records In CSV File Are As Below\n\t\t------------------------------------\n\n")
